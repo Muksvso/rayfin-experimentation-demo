@@ -1,0 +1,23 @@
+{
+  "name": "rayfin-functions",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/src/function_app.js",
+  "scripts": {
+    "build": "tsc --build",
+    "build:watch": "tsc --build --watch",
+    "clean": "rimraf dist",
+    "test": "vitest run rayfin/functions/src/function_app.spec.ts --root ../.. --pool=threads --maxWorkers=1"
+  },
+  "dependencies": {
+    "@azure/app-configuration-provider": "^2.6.0",
+    "@azure/identity": "^4.13.3",
+    "@microsoft/fabric-user-data-functions": "1.36.2",
+    "@microsoft/feature-management": "^2.3.1"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.0",
+    "typescript": "^5.8.0"
+  }
+}
